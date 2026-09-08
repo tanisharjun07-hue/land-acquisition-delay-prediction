@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # FastAPI Backend
+  api:
+    build: .
+    container_name: land-acquisition-api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python fastapi_backend.py
+    volumes:
+      - ./models:/app/models
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Streamlit Dashboard
+  dashboard:
+    build: .
+    container_name: land-acquisition-dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: streamlit run streamlit_dashboard.py --server.port=8501 --server.address=0.0.0.0
+    depends_on:
+      - api
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  models:
+  data:
+
+networks:
+  default:
+    name: land-acquisition-network
