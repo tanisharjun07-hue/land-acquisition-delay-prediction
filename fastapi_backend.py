@@ -3,6 +3,16 @@ FastAPI Backend - Land Acquisition Delay Prediction
 Production-ready API server for SIH hackathon
 """
 
+import sys
+import os
+
+# Ensure UTF-8 output on Windows console
+if sys.platform == "win32" and sys.stdout.encoding != "utf-8":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -12,6 +22,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 import json
+
 
 # Initialize FastAPI app
 app = FastAPI(

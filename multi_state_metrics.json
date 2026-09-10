@@ -1,0 +1,78 @@
+{
+  "national": {
+    "total_projects": 38,
+    "total_area": 7119.66,
+    "total_families": 4702,
+    "total_compensation": 2239437171.47,
+    "avg_completion": 57.1,
+    "avg_days_to_notification": 60,
+    "avg_days_to_possession": 240
+  },
+  "by_state": {
+    "Andhra Pradesh": {
+      "total_projects": 9,
+      "total_area": 2180.02,
+      "affected_families": 1408,
+      "compensation_assessed": 601642207.18,
+      "avg_completion": 42.5,
+      "projects_pending": 3,
+      "projects_notified": 5,
+      "projects_awarded": 1,
+      "projects_possessed": 0,
+      "total_legal_disputes": 23,
+      "avg_rr_completion": 56.6
+    },
+    "Karnataka": {
+      "total_projects": 7,
+      "total_area": 1051.76,
+      "affected_families": 687,
+      "compensation_assessed": 288378548.13,
+      "avg_completion": 56.7,
+      "projects_pending": 1,
+      "projects_notified": 4,
+      "projects_awarded": 2,
+      "projects_possessed": 0,
+      "total_legal_disputes": 25,
+      "avg_rr_completion": 43.5
+    },
+    "Maharashtra": {
+      "total_projects": 8,
+      "total_area": 1531.96,
+      "affected_families": 1173,
+      "compensation_assessed": 764515855.81,
+      "avg_completion": 73.0,
+      "projects_pending": 1,
+      "projects_notified": 2,
+      "projects_awarded": 2,
+      "projects_possessed": 3,
+      "total_legal_disputes": 25,
+      "avg_rr_completion": 67.1
+    },
+    "Rajasthan": {
+      "total_projects": 6,
+      "total_area": 1316.56,
+      "affected_families": 892,
+      "compensation_assessed": 314367067.57,
+      "avg_completion": 46.8,
+      "projects_pending": 3,
+      "projects_notified": 2,
+      "projects_awarded": 1,
+      "projects_possessed": 0,
+      "total_legal_disputes": 18,
+      "avg_rr_completion": 56.2
+    },
+    "Tamil Nadu": {
+      "total_projects": 8,
+      "total_area": 1039.36,
+      "affected_families": 542,
+      "compensation_assessed": 270533492.78,
+      "avg_completion": 65.9,
+      "projects_pending": 0,
+      "projects_notified": 4,
+      "projects_awarded": 2,
+      "projects_possessed": 2,
+      "total_legal_disputes": 22,
+      "avg_rr_completion": 76.3
+    }
+  }
+}

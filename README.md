@@ -78,38 +78,60 @@ This is a **production-ready ML system** that:
 ```
 land-acquisition-prediction/
 │
-├── ml_pipeline.py              # ⭐ ML training & prediction
+├── multi_state_sample_generator.py  # 🏛️ Multi-State realistic dataset generator (5 states)
+│   ├── create_tamil_nadu_projects()
+│   ├── create_andhra_pradesh_projects()
+│   ├── create_maharashtra_projects()
+│   ├── create_karnataka_projects()
+│   ├── create_rajasthan_projects()
+│   └── calculate_project_metrics()
+│
+├── national_dashboard.py            # 🌐 National Multi-State Monitoring System (Streamlit)
+│   ├── 📊 National Dashboard
+│   ├── 🗺️ State-wise View
+│   ├── 📈 Comparative Analytics
+│   ├── 🔄 Workflow Tracking
+│   ├── 📋 Project Details
+│   └── ⚙️ Data Generator / Refresh
+│
+├── enhanced_portal.py               # 🏛️ All-in-One Integrated National & Cadastral Portal
+│   ├── 🌐 National Multi-State Overview
+│   ├── 📊 District Dashboard (Tamil Nadu)
+│   ├── 🗺️ Cadastral Map Viewer & Inspector
+│   ├── 📋 Parcel Details & Filter
+│   ├── 📈 Project Analytics
+│   ├── 🔄 Workflow Stages
+│   ├── 🔮 AI Delay Prediction Engine
+│   └── ⚙️ Admin & Security
+│
+├── ml_pipeline.py                   # ⭐ ML training & prediction
 │   ├── LandAcquisitionPredictor class
 │   ├── create_sample_dataset()
 │   ├── train()
 │   ├── predict_with_explanation()
 │   └── _generate_recommendations()
 │
-├── fastapi_backend.py          # ⭐ REST API Server
+├── fastapi_backend.py               # ⭐ REST API Server
 │   ├── /health endpoint
 │   ├── /predict endpoint
 │   ├── /batch_predict endpoint
 │   ├── /feature_importance endpoint
 │   └── Database integration
 │
-├── streamlit_dashboard.py      # ⭐ Interactive Dashboard
+├── streamlit_dashboard.py           # ⭐ Interactive ML Dashboard
 │   ├── 🎯 Dashboard (overview)
 │   ├── 🔮 Single Prediction
 │   ├── 📊 Batch Analysis
 │   ├── 📈 Analytics
 │   └── ❓ Help
 │
-├── requirements.txt            # Python dependencies
-│
-├── Dockerfile                  # Container image
-├── docker-compose.yml          # Multi-container setup
-│
+├── requirements.txt                 # Python dependencies
+├── Dockerfile                       # Container image
+├── docker-compose.yml               # Multi-container setup
 ├── LAND_ACQUISITION_HACKATHON_PLAN.md  # Execution strategy
 │
-└── data/
-    ├── sample_projects.csv    # Demo dataset
-    └── models/
-        └── model.pkl          # Trained XGBoost model
+├── multi_state_projects.csv         # Generated multi-state projects dataset
+└── multi_state_metrics.json         # Generated national & state metrics
 ```
 
 ---

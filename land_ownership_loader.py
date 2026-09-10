@@ -88,13 +88,15 @@ def generate_default_ownership_data():
 
 def load_ownership_data():
     """Load actual ownership data from uploaded Excel file or fallback gracefully"""
+    current_dir = os.path.dirname(os.path.abspath(__file__))
     candidate_paths = [
+        os.path.join(current_dir, 'Ownership_data.xlsx'),
+        os.path.join(current_dir, 'land_ownership_data.csv'),
+        os.path.join(current_dir, 'data', 'Ownership_data.xlsx'),
+        os.path.join(current_dir, 'data', 'land_ownership_data.csv'),
         'Ownership_data.xlsx',
-        'data/Ownership_data.xlsx',
-        '/mnt/user-data/uploads/Ownership_data.xlsx',
         'land_ownership_data.csv',
-        'c:/Users/TANISH ARJUN/Downloads/files/Ownership_data.xlsx',
-        'c:/Users/TANISH ARJUN/Downloads/files/land_ownership_data.csv'
+        'data/Ownership_data.xlsx'
     ]
     
     found_path = None
@@ -102,6 +104,7 @@ def load_ownership_data():
         if os.path.exists(path):
             found_path = path
             break
+
             
     if found_path is not None:
         try:
